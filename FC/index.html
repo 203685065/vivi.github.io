@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" href="./favicon.ico">
+    <link rel="stylesheet" href="./lib/iconfont/iconfont.css">
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+    <!-- banner -->
+    <div class="banner">
+        <ul>
+            <li><a href="#"> <img src="./uploads/banner_1.png" alt=""></a></li>
+        </ul>
+    </div>
+    <!-- banner end -->
+    <!-- 乐园活动 -->
+    <h3 class="title">乐园活动</h3>
+    <!-- 乐园活动 end -->
+    <!-- main -->
+    <div class="main">
+        <!-- p1 -->
+        <a href="javascript:;" class="first">
+            <img src="./uploads/item_1.png" alt="">
+            <div class="active">
+                进行中
+            </div>
+            <div class="iconfont icon-shoucang1
+            " id="firstheart" onclick="light(1)"></div>
+            <span class="czhsb">
+                <span>
+                    <h4>疯狂的红包 不一样的撕名牌 大型家庭亲子户外活动</h4>
+                    <span class="bottom-text">
+                        <i class="iconfont icon-qizhi"></i>
+                        <span>200人以报名</span>
+                        <i class="iconfont icon-shizhong
+                        "></i>
+                        <span>本周六开始</span>
+                    </span>
+
+                </span>
+                <span class="free">免费</span>
+            </span>
+        </a>
+        <a href="javascript:;" class="first">
+            <img src="./uploads/item_1.png" alt="">
+            <div class="active">
+                进行中
+            </div>
+            <div class="iconfont icon-shoucang1
+            " id="secondheart" onclick="light(2)"></div>
+            <span class="czhsb">
+                <span>
+                    <h4>疯狂的红包 不一样的撕名牌 大型家庭亲子户外活动</h4>
+                    <span class="bottom-text">
+                        <i class="iconfont icon-qizhi"></i>
+                        <span>200人以报名</span>
+                        <i class="iconfont icon-shizhong
+                        "></i>
+                        <span>本周六开始</span>
+                    </span>
+
+                </span>
+                <span class="free">免费</span>
+            </span>
+        </a>
+        <a href="javascript:;" class="first">
+            <img src="./uploads/item_1.png" alt="">
+            <div class="active">
+                进行中
+            </div>
+            <div class="iconfont icon-shoucang1
+            " id="thirdheart" onclick="light(3)"></div>
+            <span class="czhsb">
+                <span>
+                    <h4>疯狂的红包 不一样的撕名牌 大型家庭亲子户外活动</h4>
+                    <span class="bottom-text">
+                        <i class="iconfont icon-qizhi"></i>
+                        <span>200人以报名</span>
+                        <i class="iconfont icon-shizhong
+                        "></i>
+                        <span>本周六开始</span>
+                    </span>
+
+                </span>
+                <span class="free">免费</span>
+            </span>
+        </a>
+        <!-- p1 end -->
+    </div>
+    <!-- main end -->
+    <!-- 工具条 -->
+    <div class=" toolbar">
+        <a href="#">
+            <i class="iconfont icon-index-copy"></i>
+            <span>首页</span>
+        </a>
+        <a href="#" class="select">
+            <i class="iconfont icon-youhuiquan
+            "></i>
+            <span>卡券</span>
+        </a>
+        <a href="#">
+            <i class="iconfont icon-iconfront-  "></i>
+            <span>我的</span>
+        </a>
+    </div>
+    <div id="alert"></div>
+    <!-- 工具条 end -->
+    <!-- 引入js -->
+    <script src="./js/flexible.js"></script>
+    <script>
+     
+        function light(val) {
+            var a = document.getElementById("alert");
+            a.style.animation = "collect 2s";
+            if (val === 1) {
+                var first = document.getElementById('firstheart').className
+                if (first === 'iconfont icon-shoucang1') {
+                    document.getElementById('firstheart').className = 'iconfont icon-shoucang';
+                    a.innerHTML = "活动收藏成功";
+                } else {
+                    document.getElementById('firstheart').className = 'iconfont icon-shoucang1';
+                    a.innerHTML = "取消成功";
+                }
+
+            }
+            if (val === 2) {
+                var second = document.getElementById('secondheart').className
+                if (second === 'iconfont icon-shoucang1') {
+                    document.getElementById('secondheart').className = 'iconfont icon-shoucang'
+                }
+                else {
+                    document.getElementById('secondheart').className = 'iconfont icon-shoucang1'
+                }
+            }
+            if (val === 3) {
+                var third = document.getElementById('thirdheart').className
+                if (third === 'iconfont icon-shoucang1') {
+                    document.getElementById('thirdheart').className = 'iconfont icon-shoucang';
+                }
+                else {
+                    document.getElementById('thirdheart').className = 'iconfont icon-shoucang1'
+                }
+            }
+            let timer = setInterval(function () {
+                a.style.animation = "";
+                clearInterval(timer);
+            }, 2000);
+        }
+
+        for (let i = 0; i < b.length; i++) {
+            b[i].onclick = function () {
+                this.style.display = "block";
+            }
+        }
+    </script>
+</body>
+
+</html>
